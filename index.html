@@ -68,18 +68,18 @@ body {
   transform: scale(1.02);
 }
 
-/* Candidate Photo */
+/* Candidate Photo - Rectangle */
 .photo-box img {
   width: 200px;
-  height: 200px;
+  height: 300px;
   object-fit: cover;
-  border-radius: 50%;
+  border-radius: 0; /* Rectangle photo */
   box-shadow: 0 4px 10px rgba(0,0,0,0.3);
   transition: transform 0.3s;
 }
 
 .photo-box img:hover {
-  transform: rotate(10deg);
+  transform: rotate(5deg); /* subtle hover rotation */
 }
 
 /* Content Next to Photo */
