@@ -1,83 +1,93 @@
-@media (max-width: 768px) {
+/* RESET */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
 
-  body {
-    margin: 0;
-    padding: 0;
-    font-family: sans-serif;
+/* PAGE CENTER */
+body {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #eee;
+}
+
+/* 1:1 POSTER */
+.poster {
+  width: 1080px;
+  height: 1080px;
+  background: linear-gradient(to bottom, #ff9933, #ffffff, #138808);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* RESPONSIVE PREVIEW */
+@media (max-width: 1100px) {
+  .poster {
+    width: 100vw;
+    height: 100vw;
   }
+}
 
-  .container {
-    display: flex;
+/* CARD */
+.poster-card {
+  width: 92%;
+  height: 92%;
+  background: linear-gradient(145deg, #f3bc6a, #ffd580);
+  border-radius: 30px;
+  padding: 40px;
+  display: flex;
+  gap: 30px;
+  align-items: center;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.35);
+}
+
+/* PHOTO (SQUARE ONLY) */
+.photo-box {
+  width: 300px;
+  height: 300px;
+  border-radius: 20px;
+  overflow: hidden;
+  border: 6px solid orange;
+  flex-shrink: 0;
+}
+
+.photo-box img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* CONTENT */
+.content h1 {
+  color: #d35400;
+  font-size: 48px;
+  margin-bottom: 10px;
+}
+
+.content p {
+  font-size: 26px;
+  margin-bottom: 10px;
+}
+
+.content h3 {
+  font-size: 30px;
+  color: #000;
+}
+
+/* MOBILE STACK */
+@media (max-width: 700px) {
+  .poster-card {
     flex-direction: column;
-    width: 100%;
-  }
-
-  .left-photo img {
-    width: 100%;
-    height: auto;
-    border-radius: 0;
-  }
-
-  .side-photo img {
-    width: 160px;
-    margin: 15px auto;
-    display: block;
-    border-radius: 50%;
-    border: 4px solid #ff9933;
-  }
-
-  .speech-box {
-    width: 92%;
-    margin: 15px auto;
-    padding: 16px;
-    font-size: 16px;
-    line-height: 1.6;
-    border-radius: 12px;
-  }
-
-  h1, h2 {
     text-align: center;
   }
-}
-/* ===== Mobile Responsive Code ===== */
-@media (max-width: 650px) {
 
-  body {
-    padding: 10px;
-  }
-
-  .header h1 {
-    font-size: 22px;
-  }
-
-  .header h2 {
-    font-size: 18px;
-  }
-
-  .header h3 {
-    font-size: 14px;
-  }
-
-  .side-card {
-    flex-direction: column;
-    padding: 18px;
-    gap: 15px;
-  }
-
- .photo-box img {
-  width: 180px;
-  height: 220px;
-  object-fit: cover;
-  border-radius: 15px;   /* soft corner, not round */
-  border: 5px solid orange;
-  box-shadow: 0 8px 20px rgba(0,0,0,0.3);
-}
-
-/* Mobile */
-@media (max-width: 650px) {
-  .photo-box img {
-    width: 160px;
-    height: 200px;
-    border-radius: 15px; /* same on mobile */
+  .photo-box {
+    width: 220px;
+    height: 220px;
   }
 }
