@@ -25,7 +25,21 @@
     border-radius: 50%;
     border: 4px solid #ff9933;
   }
-  /* ===== Mobile Responsive Code ===== */
+
+  .speech-box {
+    width: 92%;
+    margin: 15px auto;
+    padding: 16px;
+    font-size: 16px;
+    line-height: 1.6;
+    border-radius: 12px;
+  }
+
+  h1, h2 {
+    text-align: center;
+  }
+}
+/* ===== Mobile Responsive Code ===== */
 @media (max-width: 650px) {
 
   body {
@@ -50,28 +64,20 @@
     gap: 15px;
   }
 
-   .photo-box img {
+ .photo-box img {
+  width: 180px;
+  height: 220px;
+  object-fit: cover;
+  border-radius: 15px;   /* soft corner, not round */
+  border: 5px solid orange;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+}
+
+/* Mobile */
+@media (max-width: 650px) {
+  .photo-box img {
     width: 160px;
     height: 200px;
-    border-radius: 15px;
-  }
-
-  .logo-box img {
-    width: 60px;
-    height: 80px;
-  }
-
-  .speech {
-    font-size: 16px;
-    line-height: 1.6;
-    padding: 15px;
-    text-align: left;
-  }
-
-  .share a {
-    width: 100%;
-    text-align: center;
-    padding: 12px;
-    font-size: 15px;
+    border-radius: 15px; /* same on mobile */
   }
 }
