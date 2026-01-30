@@ -51,14 +51,14 @@
   }
 
   .photo-box img {
-    width: 150px;
+    width: 130px;
     height: 150px;
     border-radius: 50%;
   }
 
   .logo-box img {
     width: 60px;
-    height: 60px;
+    height: 80px;
   }
 
   .speech {
